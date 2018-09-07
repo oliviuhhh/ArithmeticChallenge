@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/c766316bbbc9f93539688d30e0af8d4a"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/TextView_Greeting"
+        android:layout_width="163dp"
+        android:layout_height="92dp"
+        android:text="Arithmetic Challenge"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
+        app:srcCompat="@drawable/multiplication_x_u2715_icon_256x256"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="153dp"
+        android:layout_height="122dp"
+        app:srcCompat="@drawable/substractionnnnnn"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="593dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="174dp"
+        android:layout_height="196dp"
+        app:srcCompat="@drawable/start"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="185dp"
+        android:layout_height="193dp"
+        app:srcCompat="@drawable/exit"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton21"
+        android:layout_width="143dp"
+        android:layout_height="154dp"
+        app:srcCompat="@drawable/divisionnnnn"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton22"
+        android:layout_width="148dp"
+        android:layout_height="122dp"
+        app:srcCompat="@drawable/plussss"
+        tools:layout_editor_absoluteX="207dp"
+        tools:layout_editor_absoluteY="593dp" />
+
+</android.support.constraint.ConstraintLayout>

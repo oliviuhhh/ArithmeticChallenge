@@ -20,8 +20,8 @@
         app:srcCompat="@drawable/c766316bbbc9f93539688d30e0af8d4a" />
 
     <TextView
-        android:id="@+id/TextView_Greeting"
-        android:layout_width="163dp"
+        android:id="@+id/textView_Greeting"
+        android:layout_width="143dp"
         android:layout_height="92dp"
         android:layout_marginBottom="9dp"
         android:layout_marginEnd="8dp"
@@ -29,7 +29,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Arithmetic Challenge"
+        android:text="@string/greeting"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,10 +104,10 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.962"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
+        app:layout_constraintVertical_bias="0.056"
         app:srcCompat="@drawable/exit" />
 
     <ImageButton

@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.395" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButton_Multiplication"
         android:layout_width="156dp"
         android:layout_height="156dp"
         android:layout_marginBottom="8dp"
@@ -57,7 +57,7 @@
         app:srcCompat="@drawable/multiplication_x_u2715_icon_256x256" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/imageButton_Subtraction"
         android:layout_width="153dp"
         android:layout_height="122dp"
         android:layout_marginBottom="8dp"
@@ -93,7 +93,7 @@
         app:srcCompat="@drawable/start" />
 
     <ImageButton
-        android:id="@+id/imageButton18"
+        android:id="@+id/imageButton_Exit"
         android:layout_width="182dp"
         android:layout_height="187dp"
         android:layout_marginBottom="8dp"
@@ -111,7 +111,7 @@
         app:srcCompat="@drawable/exit" />
 
     <ImageButton
-        android:id="@+id/imageButton21"
+        android:id="@+id/imageButton_Division"
         android:layout_width="143dp"
         android:layout_height="154dp"
         android:layout_marginBottom="8dp"
@@ -129,7 +129,7 @@
         app:srcCompat="@drawable/divisionnnnn" />
 
     <ImageButton
-        android:id="@+id/imageButton22"
+        android:id="@+id/imageButton_Addition"
         android:layout_width="148dp"
         android:layout_height="122dp"
         android:layout_marginBottom="8dp"

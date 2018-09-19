@@ -7,7 +7,7 @@
     tools:context=".GameActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView_spaceBackground"
         android:layout_width="744dp"
         android:layout_height="1470dp"
         android:layout_marginBottom="8dp"
@@ -16,14 +16,14 @@
         android:layout_marginTop="168dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.587"
         app:srcCompat="@drawable/c766316bbbc9f93539688d30e0af8d4a" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_num1"
         android:layout_width="125dp"
         android:layout_height="93dp"
         android:layout_marginBottom="8dp"
@@ -40,7 +40,7 @@
         app:layout_constraintVertical_bias="0.315" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_num2"
         android:layout_width="125dp"
         android:layout_height="93dp"
         android:layout_marginBottom="8dp"
@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.519" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button_num3"
         android:layout_width="125dp"
         android:layout_height="93dp"
         android:layout_marginBottom="8dp"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.73" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView_equation"
         android:layout_width="281dp"
         android:layout_height="74dp"
         android:layout_marginBottom="8dp"
@@ -93,7 +93,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_yourScore"
         android:layout_width="97dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -103,6 +103,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="TextView"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -112,7 +113,7 @@
         tools:text="@string/ur_score" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView_highscore"
         android:layout_width="97dp"
         android:layout_height="32dp"
         android:layout_marginBottom="8dp"
@@ -131,7 +132,7 @@
         tools:text="@string/high_score" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar_lab3"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="266dp"
         android:layout_height="43dp"

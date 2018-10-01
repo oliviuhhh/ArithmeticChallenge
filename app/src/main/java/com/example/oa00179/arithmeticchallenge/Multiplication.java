@@ -5,7 +5,7 @@ public class Multiplication extends ArithmeticChallenge {
     int option1, option2, option3;
 
     public Multiplication(int TOTAL_LEVELS, int TURNS_PER_LEVEL) {
-        //super(TOTAL_LEVELS, TURNS_PER_LEVEL);
+        super(TOTAL_LEVELS, TURNS_PER_LEVEL);
     }
 
     protected String createQuestion() {
@@ -16,18 +16,18 @@ public class Multiplication extends ArithmeticChallenge {
     }
 
 
-    protected int[] createchoices() {
+    protected int[] createChoices() {
         option1 = num1 * num2;
         do {
             if(num1 > 3)
-                option2 = num1 * (int)  (Math.random() * ((num2 + 4) - (num1- 8)) + (num1 -2));
+                option2 = num1 * (int)  (Math.random() * ((num2 + 3) - (num1- 3)) + (num1 -3));
             else
                 option2 = num1 *(int) (3 * Math.random() + num2);
 
         } while (option2 == option1);
         do {
             if(num1 > 3)
-                option3 = num2 * (int)  (Math.random() * ((num1 + 5) - (num2 - 3)) + (num2 -2));
+                option3 = num2 * (int)  (Math.random() * ((num1 + 3) - (num2 - 3)) + (num2 -3));
             else
                 option3 = num2 * (int) (3 * Math.random() + num1);
 

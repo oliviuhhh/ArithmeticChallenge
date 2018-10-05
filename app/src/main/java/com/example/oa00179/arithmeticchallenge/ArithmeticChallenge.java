@@ -1,15 +1,25 @@
 package com.example.oa00179.arithmeticchallenge;
 
+/************************************************************************
+ * Made by Olivia Armstrong
+ * 10/3/18
+ ************************************************************************/
+
 // import statements here
 
 public abstract class ArithmeticChallenge {
     private String mQuestionText;
     private long mStartTime;
     private String[] mChoiceText = new String[3];
+    private int mScore;
+    private int mProgress;
+    private int mTURNS_PER_LEVEL;
+    private int mAnswer;
+    private int mHighScore;
     // fields initialized here
 
     public ArithmeticChallenge(int TOTAL_LEVELS, int TURNS_PER_LEVEL){
-        //super(TOTAL_LEVELS, TURNS_PER_LEVEL);
+        mTURNS_PER_LEVEL = TURNS_PER_LEVEL;
     }
 
     /******************************************************
@@ -44,6 +54,34 @@ public abstract class ArithmeticChallenge {
         mStartTime = System.currentTimeMillis();
     }
 
+    public int getScore()  {
+        return mScore;
+    }
+
+    public void setScore(boolean isCorrect) {
+        if (isCorrect)  {
+            long duration =  System.currentTimeMillis() - mStartTime;
+            if (duration > 5000)  {
+                mScore += 100 - duration / 100;
+            }
+        }
+    }
+
+    public int getProgress()  {
+        return mProgress;
+    }
+
+    public void setProgress()  {
+        mProgress += 100 / mTURNS_PER_LEVEL;
+    }
+
+    public int getHighScore()  {
+        return mHighScore;
+    }
+
+    public void setHighScore(int highScore)  {
+        mHighScore = highScore;
+    }
 
     // other getters and setters declared and implemented here
 
@@ -51,32 +89,37 @@ public abstract class ArithmeticChallenge {
      * Concrete Classes
      ******************************************************/
 
-    protected boolean isCorrect(int choice){
-        // to be implemented
-        return true;
+    protected boolean isCorrect(int choice) {
+        if(mChoiceText[choice] == String.valueOf(mAnswer)) {
+            return true;
+        }else {
+            return false;
+        }
     }
 
 
+
     private void shuffleChoices(int[] choices) {
+        mAnswer = choices[0];
         int choice = (int) (3 * Math.random() + 1);
         {
             switch (choice)  {
                 case 1:
-                    mChoiceText[0] = " " + choices[0] + " ";
-                    mChoiceText[1] = " " + choices[1] + " ";
-                    mChoiceText[2] = " " + choices[2] + " ";
+                    mChoiceText[0] = Integer.toString(choices[0]);
+                    mChoiceText[1] = Integer.toString(choices[1]);
+                    mChoiceText[2] = Integer.toString(choices[2]);
                     break;
 
                 case 2:
-                    mChoiceText[0] = " " + choices[2] + " ";
-                    mChoiceText[1] = " " + choices[1] + " ";
-                    mChoiceText[2] = " " + choices[0] + " ";
+                    mChoiceText[0] = Integer.toString(choices[1]);
+                    mChoiceText[1] = Integer.toString(choices[2]);
+                    mChoiceText[2] = Integer.toString(choices[0]);
                     break;
 
                 case 3:
-                    mChoiceText[0] = " " + choices[1] + " ";
-                    mChoiceText[1] = " " + choices[0] + " ";
-                    mChoiceText[2] = " " + choices[2] + " ";
+                    mChoiceText[0] = Integer.toString(choices[2]);
+                    mChoiceText[1] = Integer.toString(choices[0]);
+                    mChoiceText[2] = Integer.toString(choices[1]);
                     break;
             }
         }

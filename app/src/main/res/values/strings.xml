@@ -5,4 +5,8 @@
     <string name="high_score">High Score:</string>
     <string name="equation">Equation</string>
     <string name="menu_button">Menu</string>
+    <string name="correct_toast">Correct</string>
+    <string name="incorrect_toast">Incorrect</string>
+    <string name="win_text">Winner!</string>
+    <string name="next_button">Next</string>
 </resources>

@@ -95,25 +95,59 @@ public class GameActivity extends AppCompatActivity {
      *  Grades answer and updates score and progress.
      ************************************************************************/
     private void setScoreTextAndProgressBar(boolean isCorrect){
-// more to be implemented
-        listenForClicks(true);
+        int messageResID = (isCorrect) ? R.string.correct_toast : R.string.incorrect_toast;
+        Toast correct = Toast.makeText(GameActivity.this,messageResID,Toast.LENGTH_SHORT);
+        correct.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 320);
+        correct.show();
+        game.setScore(isCorrect);
+        String scoreText = "Score: " + Integer.toString(game.getScore());
+        mScoreText.setText(scoreText);
+        updateHighScore();
+        game.setProgress();
+        mProgressBar.setProgress(game.getProgress());
+        if(game.getProgress() >= 100) //Maximum progress is 100
+            endGame();
+        else
+            listenForClicks(isCorrect);
     }
 
     /************************************************************************
      * Ends game or starts next round.
      ************************************************************************/
     private void endGame(){
-        // to be implemented
+        mQuestionText.setText(R.string.win_text);
+        for(int index = 0; index < 3; index++)
+            mChoice[index].setText("");
+        mMenu.setText(R.string.next_button);
     }
+
+    /************************************************************************
+     * Gets the high score from the Android device, sets it in the Model,
+     * and then displays it in the View.
+     ************************************************************************/
 
     protected void retrieveHighScore(String operation) {
-        // to be implemented
-
+        prefs = getSharedPreferences(operation, MODE_PRIVATE);
+        game.setHighScore(prefs.getInt("High Score", 0));
+        String highScoreText = "High Score: " + game.getHighScore();
+        mHighScoreText.setText(highScoreText);
+        String toast = "Current High Score: " + game.getHighScore();
+        Toast.makeText(this, toast, Toast.LENGTH_LONG).show();
     }
 
-    protected void updateHighScore() {
-        // to be implemented
+    /************************************************************************
+     * If current score exceeds high school, updates high score in Android
+     * device and displays it to View.
+     ************************************************************************/
 
+    protected void updateHighScore() {
+        editor = prefs.edit();
+        if (game.getScore() > game.getHighScore()) {
+            String highScoreText = "High Score: " + game.getScore();
+            mHighScoreText.setText(highScoreText);
+            editor.putInt("High Score", game.getScore());
+            editor.apply();
+        }
     }
 }
 

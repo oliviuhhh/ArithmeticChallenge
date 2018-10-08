@@ -16,6 +16,7 @@ public abstract class ArithmeticChallenge {
     private int mTURNS_PER_LEVEL;
     private int mAnswer;
     private int mHighScore;
+    private boolean ccorrect;
     // fields initialized here
 
     public ArithmeticChallenge(int TOTAL_LEVELS, int TURNS_PER_LEVEL){
@@ -72,7 +73,11 @@ public abstract class ArithmeticChallenge {
     }
 
     public void setProgress()  {
+        if(ccorrect)
         mProgress += 100 / mTURNS_PER_LEVEL;
+        else
+            mProgress -= 100 / mTURNS_PER_LEVEL;
+
     }
 
     public int getHighScore()  {
@@ -90,11 +95,9 @@ public abstract class ArithmeticChallenge {
      ******************************************************/
 
     protected boolean isCorrect(int choice) {
-        if(mChoiceText[choice] == String.valueOf(mAnswer)) {
-            return true;
-        }else {
-            return false;
-        }
+        boolean correct = (Integer.parseInt(mChoiceText[choice]) == mAnswer) ? true : false;
+        ccorrect=correct;
+        return correct;
     }
 
 
